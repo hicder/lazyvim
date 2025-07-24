@@ -18,6 +18,10 @@ return {
         },
         clangd = {
           filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "hpp" }, -- Exclude "proto" here
+          mason = false,
+          cmd = {
+            "clangd"
+          }
         }
       },
       diagnostics = {
