@@ -33,8 +33,9 @@ return {
           endpoint = "https://api.moonshot.ai/v1",
           model = "kimi-k2-0711-preview",
           timeout = 30000, -- Timeout in milliseconds
+          api_key_name = "MONSHOT_API_KEY",
           extra_request_body = {
-            temperature = 0.75,
+            temperature = 0.6,
             max_tokens = 32768,
           },
         },
@@ -42,7 +43,7 @@ return {
           __inherited_from = "openai",
           endpoint = "https://api.groq.com/openai/v1",
           model = "moonshotai/kimi-k2-instruct",
-          api_key_name = "AVANTE_GROQ_API_KEY",
+          api_key_name = "GROQ_API_KEY",
           extra_request_body = {
             temperature = 0.6,
             max_tokens = 16384,
