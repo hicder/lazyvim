@@ -6,7 +6,7 @@ return {
     event = "VeryLazy",
     version = false, -- Never set this value to "*"! Never!
     opts = {
-      provider = "kimi_k2_groq",
+      provider = "gemini_flash",
       providers = {
         gemini = {
           model = "gemini-2.5-pro",
@@ -32,8 +32,8 @@ return {
         moonshot = {
           endpoint = "https://api.moonshot.ai/v1",
           model = "kimi-k2-0711-preview",
-          timeout = 30000, -- Timeout in milliseconds
-          api_key_name = "MONSHOT_API_KEY",
+          timeout = 30000,
+          api_key_name = "MOONSHOT_API_KEY",
           extra_request_body = {
             temperature = 0.6,
             max_tokens = 32768,
@@ -43,6 +43,7 @@ return {
           __inherited_from = "openai",
           endpoint = "https://api.groq.com/openai/v1",
           model = "moonshotai/kimi-k2-instruct",
+          timeout = 30000,
           api_key_name = "GROQ_API_KEY",
           extra_request_body = {
             temperature = 0.6,
@@ -58,14 +59,12 @@ return {
         support_paste_from_clipboard = true,
       },
     },
-    -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = "make",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
       "stevearc/dressing.nvim",
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
-      --- The below dependencies are optional,
       "echasnovski/mini.pick", -- for file_selector provider mini.pick
       "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
       "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
