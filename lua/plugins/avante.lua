@@ -50,6 +50,16 @@ return {
             max_tokens = 16384,
           },
         },
+        qwen3_cerebras = {
+          __inherited_from = "openai",
+          endpoint = "https://api.cerebras.ai/v1",
+          api_key_name = "CEREBRAS_API_KEY",
+          model = "qwen-3-coder-480b",
+          timeout = 30000,
+          extra_request_body = {
+            temperature = 0.7,
+          },
+        }
       },
       behaviour = {
         auto_suggestions = false,

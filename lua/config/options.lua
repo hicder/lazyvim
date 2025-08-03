@@ -6,3 +6,4 @@ vim.opt.smoothscroll = false
 vim.g.snacks_animate = false
 vim.opt.relativenumber = false
 vim.g.autoformat = false
+vim.opt.clipboard = "unnamedplus"
